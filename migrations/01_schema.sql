@@ -1,3 +1,8 @@
+DROP TABLE users;
+DROP TABLE properties;
+DROP TABLE reservations;
+DROP TABLE property_reviews;
+
 CREATE TABLE users (
   id SERIAL PRIMARY KEY NOT NULL,
   name VARCHAR(255) NOT NULL,
