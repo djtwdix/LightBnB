@@ -27,7 +27,7 @@ CREATE TABLE properties (
   city VARCHAR(255) NOT NULL,
   province VARCHAR(255) NOT NULL,
   street VARCHAR(255) NOT NULL,
-  postal_code VARCHAR(255) NOT NULL
+  postal_code VARCHAR(255) NOT NULL,
 
   active BOOLEAN NOT NULL DEFAULT TRUE
 );
@@ -35,7 +35,7 @@ CREATE TABLE properties (
 CREATE TABLE reservations (
   id SERIAL PRIMARY KEY NOT NULL,
   guest_id INTEGER REFERENCES users(id) ON DELETE CASCADE,
-  propety_id INTEGER REFERENCES propertys(id) ON DELETE CASCADE,
+  propety_id INTEGER REFERENCES properties(id) ON DELETE CASCADE,
   start_date DATE NOT NULL,
   end_date DATE NOT NULL
 );
