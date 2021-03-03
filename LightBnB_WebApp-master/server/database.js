@@ -81,7 +81,7 @@ const getAllProperties = function(options, limit = 10) {
   LIMIT $1
   `, [limit])
   .then(res => {
-    return res.rows
+    return res.rows;
   });
 }
 exports.getAllProperties = getAllProperties;
