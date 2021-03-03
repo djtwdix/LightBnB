@@ -14,9 +14,14 @@ VALUES (1, '259 Aberdeen', 'description', 79, 1, 2, 1, "https://www.photourl.com
        'M7H 3H9', true),
        (3, '2372 Mclaughlin', 'description', 150, 4, 6, 3, "https://www.photourl.com/main3.jpg", 
        "https://www.photourl.com/cover3.jpg", 'Canada', 'Moncton', 'New Brunswick', '2372 Mclaughlin Rd.', 
-       'E5B 2V9', true)
+       'E5B 2V9', true);
 
 INSERT INTO reservations (guest_id, property_id, start_date, end_date) 
 VALUES (1, 2, '2021-09-11', '2021-09-26'),
        (2, 3, '2021-03-04', '2019-04-01'),
        (3, 1, '2021-10-01', '2021-10-14');
+
+INSERT INTO property_reviews (guest_id, property_id, reservation_id, rating, message)
+VALUES (1, 2, 1, 4, 'message'),
+       (2, 3, 2, 3, 'message'),
+       (3, 1, 3, 5, 'message');
