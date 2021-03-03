@@ -31,3 +31,12 @@ CREATE TABLE reservations (
   start_date DATE NOT NULL,
   end_date DATE NOT NULL
 )
+
+CREATE TABLE property_reviews (
+  id SERIAL PRIMARY KEY NOT NULL,
+  user_id INTEGER REFERENCES user(id) ON DELETE CASCADE,
+  propety_id INTEGER REFERENCES property(id) ON DELETE CASCADE,
+  reservation_id INTEGER REFERENCES reservations(id) ON DELETE CASCADE,
+  message TEXT,
+  rating INTEGER NOT NULL
+)
