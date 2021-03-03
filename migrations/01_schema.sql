@@ -24,3 +24,10 @@ CREATE TABLE properties (
   postal_code VARCHAR(255) NOT NULL
 );
 
+CREATE TABLE reservations (
+  id SERIAL PRIMARY KEY NOT NULL,
+  user_id INTEGER REFERENCES user(id) ON DELETE CASCADE,
+  propety_id INTEGER REFERENCES property(id) ON DELETE CASCADE,
+  start_date DATE NOT NULL,
+  end_date DATE NOT NULL
+)
