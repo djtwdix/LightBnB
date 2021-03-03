@@ -14,6 +14,6 @@ VALUES (3, '2372 Mclaughlin', 'description', 150, 4, 6, 3, "https://www.photourl
            'Canada', 'Moncton', 'New Brunswick', '2372 Mclaughlin Rd.', 'E5B 2V9', true)
 
 INSERT INTO reservations (guest_id, property_id, start_date, end_date) 
-VALUES (1, 1, '2021-09-11', '2021-09-26'),
-(2, 2, '2021-03-04', '2019-04-01'),
-(3, 3, '2021-10-01', '2021-10-14');
+VALUES (1, 2, '2021-09-11', '2021-09-26'),
+(2, 3, '2021-03-04', '2019-04-01'),
+(3, 1, '2021-10-01', '2021-10-14');
